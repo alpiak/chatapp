@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>ChatBox</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			body {
+				position: relative;
+				margin: 24px 14px 25px 10px;
+				background-image: url(images/background.jpg);
+				background-repeat: repeat;
+			}
+			#left-pane {
+				position: absolute;
+				left: 0; top: 0;
+				width: 213px;
+				background-color: #EBF0F2;
+				border-right: 1px solid #DDE0E3;
+			}
+			#left-pane-head {
+				position: relative;
+				height: 42px;
+				background-image: url(images/left_pane_head_background.png);
+				background-repeat: repeat-x;
+			}
+			#window-buttons {
+				position: absolute;
+				left: 8px; top: 12px;
+			}
+			.window-button {
+				float: left;
+				width: 12px;
+				height: 12px;
+				margin: 4px;
+				background-image: url(images/window_buttons.png);
+			}
+			#window-button-red {
+				background-position: 0 0;
+			}
+			#window-button-yellow {
+				background-position: -12px 0;
+			}
+			#window-button-green {
+				background-position: -24px 0;
+			}
+			#add-contact-button {
+				position: absolute;
+				top: 9px; right: 4px;
+				width: 24px;
+				height: 24px;
+				background-image: url(images/add-contact-button.png);
+			}
+			#contacts {
+				padding: 8px 0 37px;
+			}
+			.contact-group-name {
+				height: 14px;
+				padding-left: 11px;
+				line-height: 14px;
+				font-size: 8px;
+				color: #9DB0B7;
+			}
+			.contact {
+				position: relative;
+				height: 30px;
+				padding: 5px 10px;
+				border: 1px solid #EBF0F2;
+				zoom: 1;
+			}
+			.contact-avatar {
+				position: absolute;
+				left: 10px; top: 0; bottom: 0;
+				width: 30px;
+				height: 30px;
+				margin: auto 0;
+				border: 1px solid #AEB5B9;
+				border-radius: 4px;
+			}
+			.contact>div {
+				position: absolute;
+				left: 49px; top: 0; bottom: 0;
+				height: 28px;
+				margin: auto 0;
+			}
+			.contact-name {
+				height: 14px;
+				line-height: 14px;
+				font-size: 9px;
+				color: #393939;
+			}
+			.contact-status {
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				margin-left: 4px;
+				background-image: url(images/contact_status.png);
+				background-repeat: no-repeat;
+			}
+			.contact-status-available {
+				background-position: 0 0;
+			}
+			.contact-status-away {
+				background-position: 0 -6px;
+			}
+			.contact-status-busy {
+				background-position: 0 -12px;
+			}
+			.contact-status-offline {
+				background-position: 0 -18px;
+			}
+			.contact-title {
+				height: 14px;
+				line-height: 14px;
+				font-size: 9px;
+				color: #7E8B90;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="left-pane">
+			<div id="left-pane-head">
+				<ol id="window-buttons">
+					<li class="window-button" id="window-button-red"></li>
+					<li class="window-button" id="window-button-yellow"></li>
+					<li class="window-button" id="window-button-green"></li>
+				</ol>
+				<div id="add-contact-button"></div>
+			</div>
+			<dl id="contacts">
+				<dt class="contact-group-name">FRIENDS</dt>
+				<dd id="group-friends" class="contact-group">
+					<ul>
+						<li class="contact">
+							<img class="contact-avatar" src="images/temp/avatars/johnsavage.png" alt="John Savage's avatar"/>
+							<div>
+								<p class="contact-name">John Savage<span class="contact-status contact-status-available"></span></p>
+								<p class="contact-title">web & ui designer</p>
+							</div>
+						</li>
+						<li class="contact">
+							<img class="contact-avatar" src="images/temp/avatars/adamwolsky.png" alt="Adam Wolsky's avatar"/>
+							<div>
+								<p class="contact-name">Adam Wolsky<span class="contact-status contact-status-away"></span></p>
+								<p class="contact-title">front-end developer</p>
+							</div>
+						</li>
+						<li class="contact">
+							<img class="contact-avatar" src="images/temp/avatars/derekanonymous.png" alt="Derek Anonymous's avatar"/>
+							<div>
+								<p class="contact-name">Derek Anonymous<span class="contact-status contact-status-busy"></span></p>
+								<p class="contact-title">sales manager</p>
+							</div>
+						</li>
+						<li class="contact">
+							<img class="contact-avatar" src="images/temp/avatars/bobawesome.png" alt="Bob Awesome's avatar"/>
+							<div>
+								<p class="contact-name">Bob Awesome<span class="contact-status contact-status-offline"></span></p>
+								<p class="contact-title">web & ui designer</p>
+							</div>
+						</li>
+						<li class="contact">
+							<img class="contact-avatar" src="images/temp/avatars/ashleybond.png" alt="Ashley Bond's avatar"/>
+							<div>
+								<p class="contact-name">Ashley Bond<span class="contact-status contact-status-offline"></span></p>
+								<p class="contact-title">Web & ui designer</p>
+							</div>
+						</li>
+					</ul>
+				</dd>
+				<dt class="contact-group-name">COWORKERS</dt>
+				<dd id="group-coworkers" class="contact-group">
+					<ul>
+						<li class="contact">
+							<img class="contact-avatar" src="images/temp/avatars/johnsavage.png" alt="John Savage's avatar"/>
+							<div>
+								<p class="contact-name">John Savage<span class="contact-status contact-status-available"></span></p>
+								<p class="contact-title">Web & ui designer</p>
+							</div>
+						</li>
+						<li class="contact">
+							<img class="contact-avatar" src="images/temp/avatars/adamwolsky.png" alt="Adam Wolsky's avatar"/>
+							<div>
+								<p class="contact-name">Adam Wolsky<span class="contact-status contact-status-away"></span></p>
+								<p class="contact-title">front-end developer</p>
+							</div>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div id="right-pane">
+		</div>
+	</body>
+</html>
