@@ -60,7 +60,7 @@
 				top: 9px; right: 4px;
 				width: 24px;
 				height: 24px;
-				background-image: url(images/add-contact-button.png);
+				background-image: url(images/add_contact_button.png);
 			}
 			#contact-list {
 				margin-top: 42px;
@@ -137,8 +137,59 @@
 				color: #7E8B90;
 			}
 			#main {
-				margin-left: 214px;
+				padding-left: 214px;
 				background-color: #FFF;
+			}
+			#main-head {
+				position: relative;
+				height: 42px;
+				min-width: 87px;
+				background-image: url(images/left_pane_head_background.png);
+				background-repeat: repeat-x;
+				border-left: solid 1px #FFF;
+				zoom: 1;
+			}
+			#main-pills {
+				position: absolute;
+				left: 8px; top: 8px;
+				width: 92px;
+				height: 24px;
+				background-image: url(images/pills_background.png);
+			}
+			#main-pills-trigger {
+				position: absolute;
+				left: 2px; top: 2px;
+				width: 32px;
+				height: 20px;
+				background-image: url(images/pills_trigger.png);
+			}
+			#main-pills-trigger-icon {
+				position: absolute;
+				left: 8px; top: 3px;
+				width: 16px;
+				height: 13px;
+				background-image: url(images/pills_icons.png);
+			}
+			#voice-switch {
+				position: absolute;
+				top: 11px; right: 12px;
+				width: 75px;
+				height: 19px;
+				background-image: url(images/voice_switch_on_background.png);
+			}
+			#voice-switch-trigger {
+				position: absolute;
+				left: 23px; top: 3px;
+				width: 23px;
+				height: 14px;
+				background-image: url(images/voice_switch_trigger_on.png);
+			}
+			#load-older-messages {
+				font-size: 9px;
+				line-height: 32px;
+			}
+			#load-older-messages-arrow {
+				font-size: 5px;
 			}
 		</style>
 	</head>
@@ -218,6 +269,17 @@
 		</div>
 		<div id="main">
 			<div id="main-head">
+				<div id="main-pills">
+					<div id="main-pills-trigger">
+						<div id="main-pills-trigger-icon"></div>
+					</div>
+				</div>
+				<div id="voice-switch">
+					<div id="voice-switch-trigger"></div>
+				</div>
+			</div>
+			<div id="main-body">
+				<div id="load-older-messages">Load older messages <span id="load-older-messages-arrow">&#9650 </span></div>
 			</div>
 		</div>
 	</body>
